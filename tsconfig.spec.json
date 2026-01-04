@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "Frontend/spec",
+    "types": ["jasmine","node"]
+  },
+  "files": [
+    "**/*[sS]pec.?(m)js",
+    "**/*[sS]pec.js",
+    "**/*[sS]pec.ts",
+    "./spec/test/*spec.ts",
+    "./spec/test/*spec.js",
+    "./Frontend/test.ts"
+  ]
+}

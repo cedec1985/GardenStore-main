@@ -1,0 +1,5 @@
+# ignore les modules node, les fichiers au format pack et zip ainsi que le dossier angular/cache/20.3.2
+*.pack
+*.zip
+node_modules
+.angular/cache/20.3.2

@@ -1,0 +1,98 @@
+
+<div class="row">
+    <div class="col-md-6"></div>
+</div>
+<div class="row">
+    <div class="col-lg-10">
+        <p class="info-message">
+  <i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>
+  Pour acheter les articles de votre panier merci de fournir les informations ci-dessous :
+       </p>
+  </div>
+</div>
+<div class="row m-3 results">
+<div class="card-biofood col-md-6 ml-3 mr-3">
+    <div class="card-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+    <label for="firstName">Prénom</label>
+    <input type="text" formControlName="firstName" id="firstName">
+    <div *ngIf="registerForm.get('firstName')?.touched && registerForm.get('firstName')?.errors?.['required']" class="error">Le prénom est requis.</div>
+  </div>
+
+            <div class="form-group">
+    <label for="lastName">Nom</label>
+    <input type="text" formControlName="lastName" id="lastName">
+    <div *ngIf="registerForm.get('lastName')?.touched && registerForm.get('lastName')?.errors?.['required']" class="error">Le nom est requis.</div>
+  </div>
+
+            <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" formControlName="email" id="email">
+    <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.errors?.['required']" class="error">L'émail est requis.</div>
+ </div>
+
+            <div class="form-group">
+    <label for="tel">Téléphone</label>
+    <input type="number" formControlName="tel" id="tel">
+    <div *ngIf="registerForm.get('tel')?.touched && registerForm.get('tel')?.errors?.['required']" class="error">Le téléphone est requis.</div>
+</div>
+
+            <div class="form-group">
+    <label for="adr">Addresse</label>
+    <input type="text" formControlName="adr" id="adr">
+    <div *ngIf="registerForm.get('adr')?.touched && registerForm.get('adr')?.errors?.['required']" class="error">L'addresse est requise.</div>
+</div>
+            <div class="form-group">
+    <label for="cb">Carte bancaire</label>
+    <input type="number" formControlName="cb" id="cb">
+    <div *ngIf="registerForm.get('cb')?.touched && registerForm.get('cb')?.errors?.['required']" class="error">Le nom est requis.</div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary mr-1" type="submit" [disabled]="registerForm.invalid">confirmer</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()">Annuler</button>
+            </div>
+        </form>
+  </div>
+       <hr>
+       <hr>
+        <hr>
+        <div style="margin-left:120px;margin-top:20px;margin-bottom:60px">
+            <h5>Informations de livraison :</h5>
+                <hr>
+                <ul>
+                <li class="float-left" id="liv1">Livraison le lendemain garantie.</li>
+                <li class="float-left" id="liv2">Des frais de {{ frais | currency:"€" }} sont appliqués à toutes les commandes.</li>
+                <li class="float-left" id="liv3"> Vous serez livré par : {{deliveryBrand| deliveryBrand:"img"}}</li>
+              </ul>
+                <hr>
+        </div>
+        <div style ="margin-left:100px;margin-top:190px;margin-bottom:10px" display="block">
+        <table id="BoitePrix" class="flex-1/2" display="inline">
+            <tr>
+                <td>Sous total :</td>
+                <td class="colonneEnregistrementPrix">
+                    {{ soustotal | currency:"€"}}</td>
+            </tr>
+            <tr>
+                <td>Frais :</td>
+                <td class="colonneEnregistrementPrix">
+                    {{ frais | currency :"€"}}</td>
+            </tr>
+            <tr>
+                <td class="total">Total :</td>
+                <td class="total colonneEnregistrementPrix">
+                    {{ total | currency:"€" }}</td>
+            </tr>
+            <tr>
+                <td>Fournisseur :</td>
+                <td class="colonneEnregistrementPrix">
+                    {{ deliveryBrand|deliveryBrand:"img"}}</td>
+            </tr>
+            <tr>
+        </table>
+        </div>
+</div>
+</div>

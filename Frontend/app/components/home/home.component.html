@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col text-center">
+      <h1 style="color: green; font-weight: bold; font-size: 40px; text-shadow: 2px 2px 4px #000000;">
+        Bienvenue sur Garden Store
+      </h1>
+      <p style="font-size: 20px; color: darkgreen;">
+        Votre boutique en ligne pour tout ce qui concerne le jardinage !
+      </p>
+    </div>
+  </div>
+</div>
+ <ng-container *ngIf="messageWelcome" >
+  <p appMessage="messageWelcome" style="color: green; font-weight: bold; font-size: 30px; text-shadow: 2px 2px 4px #000000;">                                         <!-- applique la directive message -->
+    {{ messageWelcome }}
+  </p>
+<div *ngIf="isAuthenticated==true; then connecte; else pasconnecte"></div>
+<ng-template #connecte>
+<div style="color :blue">
+</div>
+</ng-template>
+<ng-template #pasconnecte>
+<div style="color:red">
+</div>
+</ng-template>
+</ng-container>
+<div class="img-container">
+  <img src="{{urloutillage}}"><img src="{{urlmobilier}}"><img src="{{urlplantes}}"><img src="{{urlaccessoires}}">
+        <div class="overlay">
+          <div class="text">Catégories</div>
+        </div>
+</div>
+<div class="row text-center justify-content-center mt-2">
+    <a style="font-size: 14px; color: rgb(30, 228, 30); stroke: 1px black; text-shadow: 1px 1px 2px black;">
+      Découvrez notre large sélection de produits pour le jardinage, y compris des outils, du mobilier, des plantes et des accessoires.
+    </a>
+    <p style="font-size: 14px; color: rgb(30,228,30); stroke: 1px black; text-shadow: 1px 1px 2px black;">
+      Profitez de nos offres spéciales et promotions exclusives pour embellir votre jardin à petit prix !
+    </p>
+    <p style="font-size: 14px; color: rgb(30,228,30); stroke: 1px black; text-shadow: 1px 1px 2px black;">
+      Inscrivez-vous à notre newsletter pour recevoir les dernières nouvelles et conseils de jardinage directement dans votre boîte mail.
+    </p>
+  </div>
+<div id="bas">
+<div class="col mb-4">
+  <app-category></app-category>
+
+</div>
+</div>

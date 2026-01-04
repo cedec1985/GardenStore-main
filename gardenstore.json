@@ -1,0 +1,101 @@
+[
+{
+    "type": "header",
+    "version": "5.2.1",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+},
+{
+    "type": "database",
+    "name": "gardenstore"
+},
+{
+    "type": "table",
+    "name": "accessoires_jardin",
+    "database": "gardenstore",
+    "data": 
+[
+
+]
+
+}
+,{
+    "type": "table",
+    "name": "client",
+    "database": "gardenstore",
+    "data": 
+[
+
+]
+
+}
+,{
+    "type": "table",
+    "name": "commande",
+    "database": "gardenstore",
+    "data": 
+[
+
+]
+
+}
+,{
+    "type": "table",
+    "name": "fournisseur",
+    "database": "gardenstore",
+    "data": 
+[
+
+]
+
+}
+,{
+    "type": "table",
+    "name": "mobilier_jardin",
+    "database": "gardenstore",
+    "data": 
+[
+
+]
+
+}
+,{
+    "type": "table",
+    "name": "outillage_jardin",
+    "database": "gardenstore",
+    "data": 
+[
+
+]
+
+}
+,{
+    "type": "table",
+    "name": "plantes_jardin",
+    "database": "gardenstore",
+    "data": 
+[
+
+]
+
+}
+,{
+    "type": "table",
+    "name": "produit",
+    "database": "gardenstore",
+    "data": 
+[
+
+]
+
+}
+,{
+    "type": "table",
+    "name": "societe",
+    "database": "gardenstore",
+    "data": 
+[
+
+]
+
+}
+]

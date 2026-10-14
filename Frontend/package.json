@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@angular-devkit/build-angular": "^21.0.4",
-    "@angular/cli": "^21.0.4",
+    "@angular/cli": "^21.2.26",
     "@angular/core": "^21.0.6",
     "@types/jasmine": "^5.1.13",
     "@types/karma": "^6.3.9",
